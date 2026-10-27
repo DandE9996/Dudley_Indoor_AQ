@@ -1,0 +1,68 @@
+{
+  "analysis_unit": "one home by one retrofit event",
+  "events": 7,
+  "treated_homes": 4,
+  "models": [
+    "DiD",
+    "CITS"
+  ],
+  "outcomes": [
+    "temp",
+    "rh",
+    "pm25",
+    "co2"
+  ],
+  "pooled_effect": false,
+  "pre_days": 90,
+  "post_days": 30,
+  "minimum_valid_hours_per_day": 18,
+  "minimum_pre_days": 63,
+  "minimum_post_days": 21,
+  "minimum_controls": 5,
+  "construction_days": "excluded inclusively",
+  "PM25_eligibility": {
+    "statistic": "mean of untransformed valid pre-period daily means",
+    "maximum": 100,
+    "unit": "micrograms/m3",
+    "applies_to": [
+      "treated home",
+      "comparison homes"
+    ],
+    "event_specific": true,
+    "timing": "raw baseline only",
+    "post_outcomes_used_for_threshold": false,
+    "status": "fixed after exploratory analyses; not prospectively prespecified"
+  },
+  "winsorization": false,
+  "primary_outcomes": "all untransformed and unwinsorized",
+  "SI_sensitivity": {
+    "outcome": "pm25",
+    "comparison_pool": "original coverage-eligible comparisons without baseline concentration restriction",
+    "outcomes": "unwinsorized",
+    "same_figure_as_primary": true
+  },
+  "optional_baseline_p95_upper_cap_sensitivity": "not performed",
+  "other_PM25_thresholds_tested": false,
+  "other_outcomes_PM25_filter": false,
+  "comparison_pool": "never treated, excluding Homes 4 and 17 for recorded works",
+  "adjustment": "heating season (November-March) when both categories are present",
+  "covariance": "home random intercept plus AR(1) using actual calendar-day gaps",
+  "CITS_posttime_center": 15.5,
+  "interval": "approximate model-conditional 95% t(G-2), one treated home per event",
+  "questionnaire_inputs": "Descriptive Tables 1/S4 only; not model covariates",
+  "primary_models": 56,
+  "comparison_pool_sensitivity_models": 14,
+  "log1p_sensitivity_models": 14,
+  "log1p_sensitivity": "Same primary model rows and design; change y only; eligibility on original-scale baseline",
+  "placebo": "56 primary fits plus Home 14 CWI CITS with the expanded comparison pool; fixed participating homes",
+  "residual_excess_kurtosis": "mean((residual-mean(residual))^4) / sd(residual)^4 - 3; sample SD",
+  "cohort": {
+    "registered_monitors": 34,
+    "coverage_percent_strictly_greater_than": 35,
+    "pooled_CO2_PM25_stagnation_percent_strictly_less_than": 3,
+    "stagnation_round_decimals": 3,
+    "stagnation_minimum_identical_run": 3,
+    "eligible_monitors": 25,
+    "independent_homes": 23
+  }
+}

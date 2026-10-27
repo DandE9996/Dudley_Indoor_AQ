@@ -1,0 +1,5 @@
+# Optional: only needed to score new data with the saved H2O calibration
+# models in 2_calibration/02_calibrate_pm25.ipynb. Java (JDK 8 or later) is
+# also required. Saved H2O binary models load only in a compatible H2O
+# release; the study applied them with h2o 3.44.0.3.
+h2o==3.44.0.3

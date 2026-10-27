@@ -1,0 +1,39 @@
+# Study data and generated results are never part of the repository
+data/
+results/
+# Safety net: data-like files anywhere in the repository
+*.csv
+*.csv.gz
+*.xlsx
+*.xls
+*.rds
+*.Rds
+*.RData
+*.parquet
+*.feather
+models/
+modCalib_*
+
+# Jupyter and Python
+.ipynb_checkpoints/
+__pycache__/
+*.pyc
+*.nbconvert.ipynb
+.venv/
+venv/
+
+# Local credentials and configuration
+.env
+.env.*
+!.env.example
+
+# R
+.Rhistory
+.Rproj.user/
+
+# Operating system and editors
+.DS_Store
+Thumbs.db
+desktop.ini
+.vscode/
+.idea/

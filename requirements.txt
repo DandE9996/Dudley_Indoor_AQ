@@ -1,0 +1,14 @@
+# Python packages for the notebooks. Install them into the environment that
+# runs the Jupyter kernel:  pip install -r requirements.txt
+# See README.md for the environment used in the release validation.
+numpy>=1.26
+pandas>=2.2
+openpyxl>=3.1
+matplotlib>=3.10
+tzdata
+jupyterlab
+ipykernel>=6
+nbconvert>=7
+
+# R 4.3 or later with base packages only runs the scripts in 5_did_cits/.
+# The article used R 4.6.0.
